@@ -1,0 +1,165 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Legacy Assistant",
+      "description": "RAG-based scalable AI assistant that collects data and voice recordings from individuals, enabling the assistant to emulate the person's responses and interactions with loved ones after their passing. Includes cost monitoring, self-harm detection, and disaster recovery.",
+      "category": "LLM",
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python",
+        "Django",
+        "Voice AI"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2024",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Sales Maximizing",
+      "description": "AI-driven inventory optimization system that minimizes inventory costs while reducing loss orders due to stockout from vendor lead times. Includes scheduled model training and monitoring pipelines.",
+      "category": "AI/ML",
+      "tags": [
+        "Python",
+        "ML",
+        "Forecasting",
+        "Data Science"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2024",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Traffic Diagnostic Tool",
+      "description": "Orchestrated traffic monitoring tool designed to detect and analyze anomalies in web traffic patterns in real-time.",
+      "category": "AI/ML",
+      "tags": [
+        "Anomaly Detection",
+        "Python",
+        "Monitoring"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2024",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Parenting Application",
+      "description": "Image classifier with 99% accuracy detecting games played by children, with parent notification for unlisted games. AI chat system detects violations or bullying with 96% accuracy.",
+      "category": "Computer Vision",
+      "tags": [
+        "Image Classification",
+        "NLP",
+        "Python",
+        "Deep Learning"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2024",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Techjays AI Chatbot",
+      "description": "RAG-based personalized AI chatbot that assists users and clients with desired information. Built with Django REST API for frontend integration.",
+      "category": "LLM",
+      "tags": [
+        "RAG",
+        "LLM",
+        "Django",
+        "REST API",
+        "Python"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2024",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Cost Reduction for Custom LLMs",
+      "description": "Reduced operational costs by 50% through efficient algorithms and resource optimization for open-source Large Language Models in NLP projects.",
+      "category": "LLM",
+      "tags": [
+        "LLM",
+        "Optimization",
+        "NLP",
+        "Open Source"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2023",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "title": "CV Summarization Tool",
+      "description": "CV summarization and candidate ranking system using NLP techniques, leading to a 45% reduction in manual screening time.",
+      "category": "NLP",
+      "tags": [
+        "NLP",
+        "Python",
+        "Text Processing",
+        "Ranking"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2023",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Web-Based KYC & Facial Recognition",
+      "description": "Web-based Know Your Customer (KYC) system incorporating liveness checking and facial recognition technology, achieving 95% accuracy in facial recognition for secure user verification.",
+      "category": "Computer Vision",
+      "tags": [
+        "Facial Recognition",
+        "KYC",
+        "OpenCV",
+        "Deep Learning"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2022",
+      "featured": true
+    },
+    {
+      "id": 9,
+      "title": "Data Visualization from Embedded Systems",
+      "description": "Pioneered real-time data visualization on the web by creating data streams from embedded systems processing local IP camera feeds.",
+      "category": "AI/ML",
+      "tags": [
+        "Data Visualization",
+        "Embedded Systems",
+        "Real-time",
+        "IoT"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2021",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Object Detection Model (Fire & Smoke)",
+      "description": "Fire-smoke detection model with 98% accuracy, demonstrating feasibility and potential applications of the technology while reducing false positives by 15%.",
+      "category": "Computer Vision",
+      "tags": [
+        "Object Detection",
+        "YOLO",
+        "Python",
+        "Deep Learning"
+      ],
+      "image": "",
+      "link": "",
+      "date": "2020",
+      "featured": true
+    }
+  ]
+}

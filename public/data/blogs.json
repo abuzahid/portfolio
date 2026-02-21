@@ -1,0 +1,20 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Using GPT-4o for Optical Character Recognition: An Experience",
+      "description": "Exploring GPT-4o's capabilities for OCR tasks — comparing traditional OCR approaches with multimodal LLM-based text extraction, discussing accuracy, speed, and practical use cases.",
+      "slug": "using-gpt-4o-for-optical-character-recognition",
+      "content": "## Introduction\n\nOptical Character Recognition (OCR) has been a cornerstone of document digitization for decades. Traditional OCR tools like Tesseract and EasyOCR have served us well, but with the advent of multimodal Large Language Models, we now have a powerful new approach.\n\n## Why GPT-4o for OCR?\n\nGPT-4o's vision capabilities allow it to understand images with remarkable accuracy. Unlike traditional OCR which focuses purely on character recognition, GPT-4o can:\n\n- Understand the **context** of the text\n- Handle complex layouts and formatting\n- Process handwritten text with higher accuracy\n- Extract structured data from unstructured documents\n\n## My Experience\n\nI tested GPT-4o against traditional OCR approaches on several document types:\n\n1. **Printed documents** — Both approaches performed well, with GPT-4o showing slight advantages in understanding layout\n2. **Handwritten text** — GPT-4o significantly outperformed traditional OCR\n3. **Complex forms** — GPT-4o excelled at extracting structured data\n\n## Practical Considerations\n\nWhile GPT-4o shows impressive results, there are trade-offs to consider:\n\n- **Cost**: API calls are more expensive than running local OCR\n- **Speed**: Traditional OCR is faster for bulk processing\n- **Privacy**: Documents are sent to external servers\n\n## Conclusion\n\nGPT-4o represents a significant leap forward for OCR tasks, especially for complex or handwritten documents. For production use, a hybrid approach — using traditional OCR for simple cases and GPT-4o for complex ones — offers the best balance of accuracy, speed, and cost.",
+      "url": "",
+      "date": "2024",
+      "tags": [
+        "GPT-4o",
+        "OCR",
+        "AI",
+        "LLM"
+      ],
+      "published": true
+    }
+  ]
+}
