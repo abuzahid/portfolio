@@ -1,0 +1,36 @@
+<% var pageTitle = 'Blogs'; var active = 'blogs'; %>
+<%- include('../partials/admin-layout', { body: `
+    <div class="admin-header-row">
+        <h1 class="admin-page-title">Blog Posts</h1>
+        <a href="/admin/blogs/new" class="btn btn-primary btn-sm">+ New Post</a>
+    </div>
+    <div class="admin-table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Slug</th>
+                    <th>Date</th>
+                    <th>Published</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${blogs.map(b => `
+                    <tr>
+                        <td>${b.title}</td>
+                        <td><code>${b.slug || '—'}</code></td>
+                        <td>${b.date}</td>
+                        <td>${b.published !== false ? '&#10003;' : ''}</td>
+                        <td class="admin-actions">
+                            <a href="/admin/blogs/${b.id}/edit" class="btn btn-sm btn-outline">Edit</a>
+                            <form action="/admin/blogs/${b.id}/delete" method="POST" onsubmit="return confirm('Delete this blog post?')" style="display:inline">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    </div>
+` }) %>

@@ -1,0 +1,16 @@
+<% var pageTitle = 'Dashboard'; var active = 'dashboard'; %>
+<%- include('../partials/admin-layout', { body: `
+    <h1 class="admin-page-title">Dashboard</h1>
+    <div class="admin-stats">
+        <div class="admin-stat-card">
+            <span class="admin-stat-number">${projectCount}</span>
+            <span class="admin-stat-label">Projects</span>
+            <a href="/admin/projects" class="admin-stat-link">Manage &rarr;</a>
+        </div>
+        <div class="admin-stat-card">
+            <span class="admin-stat-number">${blogCount}</span>
+            <span class="admin-stat-label">Blog Posts</span>
+            <a href="/admin/blogs" class="admin-stat-link">Manage &rarr;</a>
+        </div>
+    </div>
+` }) %>

@@ -1,0 +1,12 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Using GPT-4o for Optical Character Recognition: An Experience",
+      "description": "Exploring GPT-4o's capabilities for OCR tasks — comparing traditional OCR approaches with multimodal LLM-based text extraction, discussing accuracy, speed, and practical use cases.",
+      "url": "https://abuzahid.com",
+      "date": "2024",
+      "tags": ["GPT-4o", "OCR", "AI", "LLM"]
+    }
+  ]
+}

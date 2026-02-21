@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Admin Login</title>
+</head>
+<body class="admin-body admin-login-body">
+    <div class="admin-login-card">
+        <h1 class="admin-login-title">Admin Login</h1>
+        <% if (error) { %>
+            <div class="admin-alert error"><%= error %></div>
+        <% } %>
+        <form action="/admin/login" method="POST">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autofocus placeholder="Enter admin password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Login</button>
+        </form>
+    </div>
+</body>
+</html>

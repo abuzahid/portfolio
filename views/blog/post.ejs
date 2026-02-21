@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= blog.description %>">
+    <title><%= blog.title %> — Abu Zahid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Abu Zahid</a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#skills" class="nav-link">Skills</a></li>
+                <li><a href="/#experience" class="nav-link">Experience</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#blog" class="nav-link active">Blog</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <a href="/#blog" class="blog-post-back">&larr; Back to Blog</a>
+        <h1 class="blog-post-title"><%= blog.title %></h1>
+        <div class="blog-post-meta">
+            <span class="blog-post-date"><%= blog.date %></span>
+            <div class="blog-post-tags">
+                <% blog.tags.forEach(tag => { %>
+                    <span class="blog-tag"><%= tag %></span>
+                <% }) %>
+            </div>
+        </div>
+        <div class="blog-post-content">
+            <%- htmlContent %>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">Abu Zahid</span>
+                    <p class="footer-copy">&copy; 2025 Md. Abu Zahid. All rights reserved.</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="/#about">About</a>
+                    <a href="/#skills">Skills</a>
+                    <a href="/#experience">Experience</a>
+                    <a href="/#projects">Projects</a>
+                    <a href="/#contact">Contact</a>
+                </nav>
+                <a href="#" class="back-to-top" aria-label="Back to top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Admin — <%= project ? 'Edit' : 'New' %> Project</title>
+</head>
+<body class="admin-body">
+    <aside class="admin-sidebar">
+        <div class="admin-sidebar-header">
+            <a href="/admin/dashboard" class="admin-logo">Admin Panel</a>
+        </div>
+        <nav class="admin-nav">
+            <a href="/admin/dashboard" class="admin-nav-link">Dashboard</a>
+            <a href="/admin/projects" class="admin-nav-link active">Projects</a>
+            <a href="/admin/blogs" class="admin-nav-link">Blogs</a>
+        </nav>
+        <div class="admin-sidebar-footer">
+            <a href="/" class="admin-nav-link" target="_blank">View Site</a>
+            <form action="/admin/logout" method="POST" style="margin:0">
+                <button type="submit" class="admin-nav-link admin-logout-btn">Logout</button>
+            </form>
+        </div>
+    </aside>
+    <main class="admin-main">
+        <div class="admin-content">
+            <h1 class="admin-page-title"><%= project ? 'Edit' : 'New' %> Project</h1>
+            <form action="<%= project ? '/admin/projects/' + project.id : '/admin/projects' %>" method="POST" enctype="multipart/form-data" class="admin-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required value="<%= project ? project.title : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="3" required><%= project ? project.description : '' %></textarea>
+                </div>
+                <div class="form-row-admin">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category" required value="<%= project ? project.category : '' %>" placeholder="e.g., AI/ML, LLM, NLP">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="text" id="date" name="date" value="<%= project ? project.date : new Date().getFullYear() %>" placeholder="e.g., 2024">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" name="tags" value="<%= project ? project.tags.join(', ') : '' %>" placeholder="Python, ML, Deep Learning">
+                </div>
+                <div class="form-group">
+                    <label for="link">Project Link (optional)</label>
+                    <input type="url" id="link" name="link" value="<%= project ? project.link : '' %>" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png,.webp">
+                    <% if (project && project.image) { %>
+                        <p class="form-help">Current: <%= project.image %></p>
+                    <% } %>
+                </div>
+                <div class="form-group form-check">
+                    <label>
+                        <input type="checkbox" name="featured" <%= project && project.featured ? 'checked' : '' %>>
+                        Featured project
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><%= project ? 'Update' : 'Create' %> Project</button>
+                    <a href="/admin/projects" class="btn btn-outline">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
